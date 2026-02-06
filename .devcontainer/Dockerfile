@@ -5,6 +5,7 @@ FROM archlinux:latest
 RUN pacman -Syu --noconfirm base-devel
 
 # Install other necessary packages
-RUN pacman -S --noconfirm git vim python
+RUN pacman -S --noconfirm git vim python jdk-openjdk curl
 
-# Any other setup steps
+WORKDIR /app
+RUN curl -LJO
