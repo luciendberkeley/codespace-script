@@ -1,7 +1,7 @@
 {
   "name": "Arch Linux Codespace",
   "image": "mcr.microsoft.com/devcontainers/java:25-trixie",
-  "postCreateCommand": "bash setup.sh",
+  "postCreateCommand": "bash /workspaces/*/.devcontainer/setup.sh",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "none",
