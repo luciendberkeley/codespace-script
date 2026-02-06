@@ -1,36 +1,21 @@
 {
-  "name": "Arch Linux Codespace",
-  "image": "mcr.microsoft.com/devcontainers/java:25-trixie",
-  "postCreateCommand": "bash /workspaces/*/.devcontainer/setup.sh",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "none",
-      "installMaven": "true",
-      "installGradle": "false"
-    },
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "vscjava.vscode-java-pack",
-        "vscjava.vscode-java-debug",
-        "redhat.java",
-        "Oracle.oracle-java"
-      ],
-      "settings": {
-        "editor.inlayHints.enabled": "off",
-        "java.server.launchMode": "Standard",
-        "redhat.telemetry.enabled": true
-      }
-    }
-  },
+  "name": "Arch i3 Codespace",
+  "image": "dcsunset/i3-arch-vnc:latest",
 
   "forwardPorts": [6080],
-
   "portsAttributes": {
     "6080": {
-      "label": "desktop"
+    "label": "i3 Desktop (noVNC)",
+    "onAutoForward": "openBrowser"
     }
-  }
+  },
+
+  "remoteUser": "arch",
+
+  "containerEnv": {
+    "VNC_PASSWD": "password",
+    "USERNAME": "arch"
+  },
+
+  "postCreateCommand": "bash /workspaces/*/.devcontainer/setup.sh"
 }
