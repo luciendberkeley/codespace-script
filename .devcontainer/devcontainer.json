@@ -5,13 +5,6 @@
   },
   "settings": {},
   "extensions": [],
-  "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
-  },
-  "forwardPorts": [5901],
-  "portsAttributes": {
-    "5901": {
-      "label": "VNC desktop"
-    }
-  } "postCreateCommand": "echo 'Environment ready!'",
+  "postCreateCommand": "echo 'Environment ready!'",
+  "remoteUser": "arch"
 }
