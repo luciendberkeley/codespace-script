@@ -5,8 +5,9 @@ FROM archlinux:latest
 RUN pacman -Syu --noconfirm base-devel
 
 # Install other necessary packages
-RUN pacman -S --noconfirm git vim python jdk-openjdk curl
+RUN pacman -S --noconfirm git vim python jdk-openjdk curl tmux fastfetch
 
 WORKDIR /app
 RUN curl -LJO https://raw.githubusercontent.com/luciendberkeley/arch-codespace-template/refs/heads/main/setup.sh
-
+RUN chmod +x ./setup.sh
+RUN ./setup.sh

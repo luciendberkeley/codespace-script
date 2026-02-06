@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "Running Setup"
+echo "---------- Running Setup"
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/arch-codespace-template/refs/heads/main/.config/.vimrc
+mv ./.vimrc ~/
+
