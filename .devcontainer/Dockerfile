@@ -33,4 +33,3 @@ RUN useradd -m arch
 WORKDIR /home/arch
 
 CMD ["/usr/bin/supervisord"]
-
