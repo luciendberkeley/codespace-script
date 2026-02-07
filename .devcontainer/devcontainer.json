@@ -4,9 +4,7 @@
     "dockerfile": "Dockerfile"
   },
 
-  "image": "dcsunset/i3-arch-vnc:latest",
-
-  "containerUser": "arch",
+  "containerUser": "root",
 
   "containerEnv": {
     "VNC_PASSWD": "password",
