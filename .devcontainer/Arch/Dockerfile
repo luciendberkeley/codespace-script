@@ -26,7 +26,7 @@ RUN git clone https://github.com/kanaka/noVNC.git
 WORKDIR /usr/share/noVNC/utils/
 RUN git clone https://github.com/kanaka/websockify
 
-ENV DISPLAY=:0
+ENV DISPLAY=:1
 
 COPY supervisord.conf /etc/supervisord.conf
 
