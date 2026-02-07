@@ -26,9 +26,7 @@ RUN git clone https://github.com/kanaka/noVNC.git
 WORKDIR /usr/share/noVNC/utils/
 RUN git clone https://github.com/kanaka/websockify
 
-ENV DISPLAY=:1
-
-COPY supervisord.conf /etc/supervisord.conf
+ENV DISPLAY=:0
 
 RUN mkdir -p /home/arch/.config/i3 && \
     cp /etc/i3/config /home/arch/.config/i3/config && \
@@ -36,7 +34,5 @@ RUN mkdir -p /home/arch/.config/i3 && \
 
 EXPOSE 6080
 
-WORKDIR /home/arch
-
-CMD ["/usr/bin/supervisord"]
-
+COPY startup-i3.sh /usr/local/bin/startup-i3.sh
+RUN chmod +x /usr/local/bin/startup-i3.sh
