@@ -17,15 +17,22 @@ RUN pacman -S --noconfirm \
     xorg-server-xvfb \
     xorg-xinit
 
+RUN useradd -m -G wheel arch && \
+    echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 # noVNC setup
 WORKDIR /usr/share/
 RUN git clone https://github.com/kanaka/noVNC.git
 WORKDIR /usr/share/noVNC/utils/
 RUN git clone https://github.com/kanaka/websockify
 
-RUN export DISPLAY=:0.0
+ENV DISPLAY=:0
 
 COPY supervisord.conf /etc/
+
+RUN mkdir -p /home/arch/.config/i3 && \
+    cp /etc/i3/config /home/arch/.config/i3/config && \
+    chown -R arch:arch /home/arch
 
 EXPOSE 6080
 
@@ -33,3 +40,4 @@ RUN useradd -m arch
 WORKDIR /home/arch
 
 CMD ["/usr/bin/supervisord"]
+

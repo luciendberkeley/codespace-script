@@ -3,13 +3,6 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-
-  "containerUser": "arch",
-
-  "containerEnv": {
-    "VNC_PASSWD": "password",
-    "USERNAME": "arch"
-  },
   
   "forwardPorts": [6080],
   "portsAttributes": {
@@ -17,5 +10,7 @@
     "label": "i3 Desktop (noVNC)",
     "onAutoForward": "openBrowser"
     }
-  }
+  },
+
+  "overrideCommand":false
 }
