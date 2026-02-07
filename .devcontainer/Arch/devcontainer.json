@@ -12,5 +12,6 @@
     }
   },
 
-  "overrideCommand":false
+  "overrideCommand":true,
+  "command": "/usr/bin/supervisord -c /etc/supervisord.conf"
 }

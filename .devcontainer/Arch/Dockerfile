@@ -28,7 +28,7 @@ RUN git clone https://github.com/kanaka/websockify
 
 ENV DISPLAY=:0
 
-COPY supervisord.conf /etc/
+COPY supervisord.conf /etc/supervisord.conf
 
 RUN mkdir -p /home/arch/.config/i3 && \
     cp /etc/i3/config /home/arch/.config/i3/config && \
