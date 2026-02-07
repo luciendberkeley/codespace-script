@@ -27,7 +27,7 @@ RUN export DISPLAY=:0.0
 
 COPY supervisord.conf /etc/
 
-EXPOSE 8083
+EXPOSE 6080
 
 RUN useradd -m arch
 WORKDIR /home/arch
