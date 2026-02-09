@@ -13,6 +13,11 @@ curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/ref
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/i3-config
 mv ./i3-config ~/.config/i3/config
 
-export DISPLAY=:1
+curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc-arch
+curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc
+exit
+mv ./.bashrc-arch /home/arch/.bashrc
+mv ./.bashrc ~/.bashrc
+su - arch
 
 echo "Setup done"
