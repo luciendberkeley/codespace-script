@@ -15,6 +15,7 @@ mv ./i3-config ~/.config/i3/config
 
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc-arch
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc
+curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bash_profile
 sudo mv ./.bashrc-arch /home/arch/.bashrc
 sudo mv ./.bash_profile /home/arch/.bash_profile
 sudo mv ./.bashrc /root/.bashrc
