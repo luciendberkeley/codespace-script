@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Starting virtual display..."
-Xvfb :1 -screen 0 1920x1080x24 &
+Xvfb :1 -screen 0 1920x1200x24 &
 
 export DISPLAY=:1
 
