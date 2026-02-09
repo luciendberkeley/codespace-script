@@ -15,9 +15,7 @@ mv ./i3-config ~/.config/i3/config
 
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc-arch
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.bashrc
-exit
-mv ./.bashrc-arch /home/arch/.bashrc
-mv ./.bashrc ~/.bashrc
-su - arch
+sudo mv ./.bashrc-arch /home/arch/.bashrc
+sudo mv ./.bashrc /root/.bashrc
 
 echo "Setup done"
