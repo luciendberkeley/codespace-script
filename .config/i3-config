@@ -64,8 +64,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+n focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+j focus down
+bindsym $mod+k focus up
 bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
@@ -76,8 +76,8 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+n move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
 bindsym $mod+Shift+o move right
 
 # alternatively, you can use the cursor keys:
