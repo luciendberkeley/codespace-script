@@ -10,6 +10,8 @@ curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/ref
 mv ./.vimrc ~/
 
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/vimium-config.json
+curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/i3-config
+mv ./i3-config ~/.config/i3/config
 
 export DISPLAY=:1
 
