@@ -10,8 +10,12 @@ pacman -S --noconfirm sudo
 su - arch
 sh .devcontainer/Arch/setup.sh
 
+# Open up firefox and login to github.com
 gh auth
-# FOLLOW THE AUTH PROCESS
+# Follow the auth process (usually with browser)
 gh auth setup-git
 ```
-5. You should be good but tbd
+5. Install vimium extension
+6. Import vimium config from `vimium-config.json`
+7. Run: `rm vimium-config.json`
+8. Should be setup
