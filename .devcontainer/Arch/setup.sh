@@ -9,6 +9,8 @@ sudo pacman -S --noconfirm --needed vim tmux kitty firefox git jdk-openjdk base-
 curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/.vimrc
 mv ./.vimrc ~/
 
+curl -LJO https://raw.githubusercontent.com/luciendberkeley/codespace-script/refs/heads/main/.config/vimium-config.json
+
 export DISPLAY=:1
 
 echo "Setup done"
